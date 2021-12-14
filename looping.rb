@@ -1,5 +1,10 @@
 def happy_new_year
-  # your code here
+  i = 10
+  until i == 0
+    puts i
+    i-= 1
+  end
+  puts "Happy New Year!"
 end
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
@@ -16,9 +21,35 @@ def fizzbuzz(num)
 end
 
 def fizzbuzz_printer
-  # your code here
+  i = 1
+  until i == 101
+    if i % 3 == 0 && i % 5 == 0
+      puts "FizzBuzz"
+      i += 1
+    elsif i % 3 == 0
+      puts "Fizz"
+      i += 1
+    elsif i % 5 == 0
+      puts "Buzz"
+      i += 1
+    else
+      puts i
+      i += 1
+    end
+  end
 end
 
+fizzbuzz_printer
+
 def reverse_string(str)
-  # your code here
+  i = str.length
+  new_string = ""
+  while i > 0
+    i -= 1
+    letter = str[i]
+    new_string += letter
+  end
+  return new_string
 end
+
+reverse_string("hello")
